@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Nguyễn Thị Khánh Huyền</title>
+    <title>Student Productivity Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -11,151 +11,163 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Decorations -->
+    <div class="background-decorations">
+        <!-- Crescent Moons -->
+        <div class="moon crescent moon1"></div>
+        <div class="moon crescent moon2"></div>
+        <div class="moon crescent moon3"></div>
+        
+        <!-- Full Moons -->
+        <div class="moon full moon4"></div>
+        <div class="moon full moon5"></div>
+        
+        <!-- Translucent Circles -->
+        <div class="circle large circle1"></div>
+        <div class="circle medium circle2"></div>
+        <div class="circle small circle3"></div>
+        <div class="circle large circle4"></div>
+        <div class="circle medium circle5"></div>
+        <div class="circle small circle6"></div>
+    </div>
+
+    <div class="floating-icons">
+        <i class="fas fa-heart floating-icon icon1"></i>
+        <i class="fas fa-star floating-icon icon2"></i>
+        <i class="fas fa-sparkles floating-icon icon3"></i>
+        <i class="fas fa-heart floating-icon icon4"></i>
+        <i class="fas fa-star floating-icon icon5"></i>
+        <i class="fas fa-sparkles floating-icon icon6"></i>
+        <i class="fas fa-heart floating-icon icon7"></i>
+        <i class="fas fa-star floating-icon icon8"></i>
+    </div>
+
+    <div class="floating-bears">
+        <div class="bear bear-sparkle">🐻✨</div>
+        <div class="bear bear-rainbow">🐻🌈</div>
+        <div class="bear bear-painter">🐻🎨</div>
+        <div class="bear bear-coffee">🐻☕</div>
+    </div>
+
+    <div class="particles">
+        <div class="particle particle1"></div>
+        <div class="particle particle2"></div>
+        <div class="particle particle3"></div>
+        <div class="particle particle4"></div>
+        <div class="particle particle5"></div>
+    </div>
+
     <header>
         <div class="container">
-            <div class="logo">Nguyễn Thị Khánh Huyền</div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#notes">Notes</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle" class="theme-toggle">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="logo">Student Productivity Dashboard</div>
+            <div class="header-controls">
+                <div id="motivational-message" class="motivational-message">Stay focused and productive! 🌟</div>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Nguyễn Thị Khánh Huyền</h1>
-                    <p class="profession">Sinh viên khoa CNTT - Đồ họa kỹ thuật số</p>
-                    <blockquote class="quote">"Nghệ thuật nằm ở cách tôi nhìn thế giới."</blockquote>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn primary">Xem dự án</a>
-                        <a href="#contact" class="btn secondary">Liên hệ</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Tôi là Nguyễn Thị Khánh Huyền, một sinh viên đam mê công nghệ thông tin và đồ họa kỹ thuật số. Khi còn nhỏ tôi đã mong muốn được sáng tạo và có thể làm một sản phẩm mang đậm dấu ấn cá nhân. Khi biết Đại học Gia Định có ngành Đồ Họa Kỹ Thuật Số, tôi đã đăng ký để theo đuổi đam mê sáng tạo từ nhỏ.</p>
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-name">Photoshop</div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-percent="90"></div>
+    <main class="dashboard">
+        <div class="container">
+            <div class="dashboard-grid">
+                <!-- Clock Section -->
+                <div class="dashboard-card clock-card">
+                    <h3><i class="fas fa-clock"></i> Current Time</h3>
+                    <div class="clock-container">
+                        <div class="digital-clock" id="digital-clock">00:00:00</div>
+                        <div class="analog-clock">
+                            <div class="clock-face">
+                                <div class="hour-hand" id="hour-hand"></div>
+                                <div class="minute-hand" id="minute-hand"></div>
+                                <div class="second-hand" id="second-hand"></div>
+                                <div class="center-dot"></div>
+                                <div class="hour-marks"></div>
+                            </div>
                         </div>
-                        <div class="skill-percent">90%</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Illustrator</div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-percent="80"></div>
-                        </div>
-                        <div class="skill-percent">80%</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Figma</div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-percent="70"></div>
-                        </div>
-                        <div class="skill-percent">70%</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">HTML/CSS</div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-percent="60"></div>
-                        </div>
-                        <div class="skill-percent">60%</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Blender (3D)</div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-percent="40"></div>
-                        </div>
-                        <div class="skill-percent">Cơ bản</div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Website Portfolio Cá nhân</h3>
-                        <p>Vai trò: UI Design + HTML/CSS</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Thiết kế mô hình 3D</h3>
-                        <p>Công cụ: Blender</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>UI Website giới thiệu bản thân</h3>
-                        <p>UI/UX + Front-end</p>
+                <!-- Pomodoro Timer -->
+                <div class="dashboard-card pomodoro-card">
+                    <h3><i class="fas fa-hourglass-half"></i> Pomodoro Timer</h3>
+                    <div class="pomodoro-container">
+                        <div class="timer-display" id="timer-display">25:00</div>
+                        <div class="timer-controls">
+                            <button id="start-timer" class="btn primary"><i class="fas fa-play"></i> Start</button>
+                            <button id="pause-timer" class="btn secondary"><i class="fas fa-pause"></i> Pause</button>
+                            <button id="reset-timer" class="btn secondary"><i class="fas fa-redo"></i> Reset</button>
+                        </div>
+                        <div class="pomodoro-modes">
+                            <button class="mode-btn active" data-mode="work">Work (25m)</button>
+                            <button class="mode-btn" data-mode="short-break">Short Break (5m)</button>
+                            <button class="mode-btn" data-mode="long-break">Long Break (15m)</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>hn35705@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>0978400955</span>
+                <!-- Task List -->
+                <div class="dashboard-card task-card">
+                    <h3><i class="fas fa-tasks"></i> Task List</h3>
+                    <div class="task-container">
+                        <div class="add-task">
+                            <input type="text" id="task-input" placeholder="Add a new task...">
+                            <button id="add-task-btn" class="btn primary"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <ul id="task-list" class="task-list"></ul>
                     </div>
                 </div>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-        </section>
 
-        <section id="notes" class="notes">
-            <div class="container">
-                <h2>Work Notes</h2>
-                <div class="notes-container">
-                    <div class="add-note">
-                        <input type="text" id="note-input" placeholder="Thêm công việc...">
-                        <button id="add-note-btn" class="btn primary">Thêm</button>
+                <!-- Notes Section -->
+                <div class="dashboard-card notes-card">
+                    <h3><i class="fas fa-sticky-note"></i> Quick Notes</h3>
+                    <div class="notes-container">
+                        <textarea id="notes-textarea" placeholder="Write your notes here..."></textarea>
+                        <button id="save-notes-btn" class="btn primary"><i class="fas fa-save"></i> Save Notes</button>
                     </div>
-                    <div id="notes-list" class="notes-list"></div>
                 </div>
-                <div class="deadline-container">
-                    <h3>Deadline Timer</h3>
-                    <input type="datetime-local" id="deadline-input">
-                    <button id="set-deadline-btn" class="btn primary">Đặt deadline</button>
-                    <div id="countdown" class="countdown"></div>
+
+                <!-- Deadline Reminders -->
+                <div class="dashboard-card deadline-card">
+                    <h3><i class="fas fa-calendar-alt"></i> Deadline Reminders</h3>
+                    <div class="deadline-container">
+                        <div class="add-deadline">
+                            <input type="text" id="deadline-task" placeholder="Task name">
+                            <input type="datetime-local" id="deadline-time">
+                            <button id="add-deadline-btn" class="btn primary"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <ul id="deadline-list" class="deadline-list"></ul>
+                    </div>
+                </div>
+
+                <!-- Alarm Section -->
+                <div class="dashboard-card alarm-card">
+                    <h3><i class="fas fa-bell"></i> Alarm</h3>
+                    <div class="alarm-container">
+                        <div class="set-alarm">
+                            <input type="time" id="alarm-time">
+                            <input type="text" id="alarm-label" placeholder="Alarm label">
+                            <button id="set-alarm-btn" class="btn primary"><i class="fas fa-bell"></i> Set Alarm</button>
+                        </div>
+                        <ul id="alarm-list" class="alarm-list"></ul>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
+    <!-- Notification -->
     <div id="notification" class="notification"></div>
+
+    <!-- Alarm Modal -->
+    <div id="alarm-modal" class="alarm-modal">
+        <div class="alarm-modal-content">
+            <h3>⏰ Alarm!</h3>
+            <p id="alarm-message">Time to wake up!</p>
+            <button id="dismiss-alarm" class="btn primary">Dismiss</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
